@@ -9,6 +9,7 @@ jobs:
                 node-version: [16.x]
             fail-fast: true
         steps:
+            - uses: actions/checkout@v2
             - name: Copy Environment Variables
               run: |
                   touch .env
@@ -19,6 +20,5 @@ jobs:
                   node-version: ${{matrix.node-version}}
             - name: npm install & build
               run: |
-                  npm install -g yarn
-                  yarn
-                  yarn build:gh-pages
+                  npm install
+                  npm run build:gh-pages
