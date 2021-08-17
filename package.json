@@ -1,0 +1,29 @@
+{
+    "name": "firebase-demo",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "targets": {
+        "app": {
+            "distDir": "./docs"
+        }
+    },
+    "scripts": {
+        "dev": "parcel src/index.html",
+        "build:gh-pages": "parcel build src/index.html --public-url /firebase-demo/"
+    },
+    "devDependencies": {
+        "@parcel/transformer-sass": "2.0.0-rc.0",
+        "@types/firebase": "^3.2.1",
+        "@types/webfontloader": "^1.6.33",
+        "autoprefixer": "^10.3.1",
+        "parcel": "^2.0.0-rc.0",
+        "postcss-easings": "^3.0.1",
+        "tailwindcss": "^2.2.7"
+    },
+    "dependencies": {
+        "dotenv": "^10.0.0",
+        "firebase": "^8.9.1",
+        "webfontloader": "^1.6.28"
+    }
+}
