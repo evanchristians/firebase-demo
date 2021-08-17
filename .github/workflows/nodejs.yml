@@ -11,8 +11,8 @@ jobs:
         steps:
             - name: Copy Environment Variables
               run: |
-                touch .env
-                echo "FIREBASE_API_KEY=${{secret.FIREBASE_API_KEY}}" >> .env
+                  touch .env
+                  echo "FIREBASE_API_KEY=${{secrets.FIREBASE_API_KEY}}" >> .env
             - name: Use Node.js ${{matrix.node-version}}
               uses: actions/setup-node@v1
               with:
